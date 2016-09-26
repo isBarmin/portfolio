@@ -75,7 +75,7 @@
     &:hover {
       border-color: $white;
       background: $white;
-      color: $textDark;
+      color: rgba($textDark, .85);
     }
   }
 }

@@ -1,1 +1,28 @@
-.footer {}
+.footer {
+  background: rgba($black, .85);
+  color: rgba($white, .5);
+}
+
+  .footer__section {
+    padding: 1.7rem 3rem;
+    font-size: 0;
+
+    & + & {
+      border-top: 1px solid rgba($white, .1);
+    }
+  }
+
+    .footer__part {
+      display: inline-block;
+      vertical-align: middle;
+      width: 50%;
+      font-size: 1.6rem;
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+
+      .footer__desc {
+        max-width: 32em;
+      }

@@ -1,0 +1,43 @@
+.first {
+  position: relative;
+  height: 100vh;
+  min-height: 500px;
+  background: #75A6A9 url(../img/bg/bg-mountains.jpg) no-repeat top / cover;
+  color: $white;
+  font-size: 0;
+  text-align: center;
+}
+
+  .first__me {
+    position: absolute;
+    left: 0;  right: 0;
+    top: 50%;
+    max-width: 40rem;
+    margin: auto;
+    font-size: 1.6rem;
+    transform: translateY(-50%);
+  }
+
+  .first__btn-next {
+    position: absolute;
+    left: 0;  right: 0;
+    bottom: 2rem;
+    width:  6rem;
+    height: 6rem;
+    margin: auto;
+    border-radius: 50%;
+    font-family: Fontawesome;
+    font-size: 4rem;
+    text-align: center;
+    cursor: pointer;
+    opacity: .7;
+    transition: opacity .5s;
+
+    &:before {
+      content: '\f078 ';
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
