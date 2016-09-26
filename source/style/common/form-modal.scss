@@ -1,0 +1,58 @@
+.form-modal {
+  width: 380px;
+  margin: auto;
+  border-radius: 5px;
+  text-align: center;
+}
+
+  .form-modal__body {
+    padding: 33px 20px;
+    border-top-left-radius:  inherit;
+    border-top-right-radius: inherit;
+    background: rgba($white, .8);
+  }
+
+    .form-modal__section {
+      margin-bottom: 2.8rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .form-modal__title {
+      margin-bottom: .95em;
+    }
+
+
+  .form-modal__foot {
+    display: table;
+    width: 100%;
+    border-bottom-left-radius:  inherit;
+    border-bottom-right-radius: inherit;
+  }
+
+    .form-modal__btn {
+      display: table-cell;
+      border: none;
+      border-right: 2px solid rgba($white, .25);
+      border-radius: 0;
+      background: rgba($green, .85);
+
+
+      &:hover {
+        background: rgba(darken($green, 7%), .85);
+      }
+
+      &:first-child {
+        border-bottom-left-radius: inherit;
+      }
+      &:last-child {
+        border-right: none;
+        border-bottom-right-radius: inherit;
+      }
+    }
+
+    button.form-modal__btn {
+      width: 100%;
+    }

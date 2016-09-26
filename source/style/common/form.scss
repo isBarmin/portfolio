@@ -1,0 +1,13 @@
+.form-row {
+  margin-bottom: 2rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+  .form-row__caption {
+    margin-bottom: .4em;
+    color: rgba($textColor, .8);
+    font-weight: bold;
+  }

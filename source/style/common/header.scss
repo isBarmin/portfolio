@@ -1,1 +1,15 @@
 .header {}
+
+  .header__in {
+    @extend %clearfix;
+
+    padding: 2.2rem 0;
+  }
+
+    .header__part {
+      float: left;
+
+      &:last-child {
+        float: right;
+      }
+    }

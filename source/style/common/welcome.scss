@@ -1,0 +1,53 @@
+.welcome {
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  min-height: 100%;
+  padding: 10rem 0;
+  background: #fff url(../img/bg/bg-mountains.jpg)  no-repeat center / cover;
+  text-align: center;
+  perspective: 1000;
+}
+
+  .welcome__btn-auth {
+    position: absolute;
+    top: 2rem;  right: 2rem;
+  }
+
+
+  // двухсторонний элемент
+  .welcome__flipper {
+    width: 380px;
+    margin: auto;
+    transition: .6s;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+  }
+    .welcome__view {
+      float: left;
+      margin-right: -100%;
+
+      &:last-child {
+        transform: rotateY(180deg);
+      }
+    }
+    .welcome__view--back {
+      backface-visibility: hidden;
+    }
+
+    // отображается другая сторона
+    .welcome__flipper--flip {
+      transform: rotateY(180deg);
+    }
+
+
+
+  .welcome__copyright {
+    position: absolute;
+    left: 0;  right: 0;
+    bottom: 3.7rem;
+    color: $white;
+    font-weight: 300;
+    text-align: center;
+  }

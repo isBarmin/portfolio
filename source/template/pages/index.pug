@@ -1,6 +1,85 @@
-extends ../_template
+extends ../_start
 
 block variables
-  - var title = 'Start page'
+  - var title = 'Welcome'
+
+
+
+
 
 block content
+  .welcome
+
+    a.btn.btn--clear.welcome__btn-auth(href="#404") Авторизоваться
+
+    .welcome__flipper
+      .welcome__view
+        .form-modal
+          .form-modal__body
+            .form-modal__section
+              .me
+                .me__photo-wrap
+                  img.me__photo(alt="Я")
+                .me__name Бармин Илья
+                .me__caption Личный сайт веб разработчика
+
+            .form-modal__section
+              ul.social.social--colored
+                li.social__item
+                  a.social__btn.social__btn--vk(href="#404", title="Вконтакте")
+                li.social__item
+                  a.social__btn.social__btn--git(href="#404", title="Github")
+                li.social__item
+                  a.social__btn.social__btn--in(href="#404", title="Linkedin")
+
+          .form-modal__foot
+            a.btn.form-modal__btn(href="#404") Мои работы
+            a.btn.form-modal__btn(href="#404") Обо мне
+            a.btn.form-modal__btn(href="#404") Блог
+
+      .welcome__view.welcome__view--back
+        .form-modal
+          .form-modal__body
+            .title.form-modal__title Авторизуйтесь
+
+            .form-row
+              .input-complex
+                .input-complex__side
+                  i.input-complex__icon.fa.fa-user
+                input.field.input-complex__field(type="text", placeholder="Логин")
+
+            .form-row
+              .input-complex
+                .input-complex__side
+                  i.input-complex__icon.fa.fa-key
+                input.field.input-complex__field(type="password", placeholder="Пароль")
+
+            .form-row
+              label.check.check--checkbox
+                input.check__input(type="checkbox", name="is-human", checked)
+                i.check__fake
+                span.check__label Я человек
+
+            .form-row
+              .form-row__caption Вы точно не робот?
+
+              ul.check-group.check-group--inline
+                li.check-group__item
+                  label.check.check--radio.check--highlight
+                    input.check__input(type="radio", name="really-human", checked)
+                    i.check__fake
+                    span.check__label Да
+
+                li.check-group__item
+                  label.check.check--radio.check--highlight
+                    input.check__input(type="radio", name="really-human")
+                    i.check__fake
+                    span.check__label Не уверен
+
+          .form-modal__foot
+            a.btn.form-modal__btn(href="#404") На главную
+            button.btn.form-modal__btn(type="submit") Войти
+
+
+    .welcome__copyright
+      | © Бармин Илья | создано с любовью в LoftSchool | 2016

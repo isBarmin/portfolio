@@ -1,0 +1,143 @@
+.field {
+  padding: .5em 1em;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  outline: none;
+  background: #fff;
+}
+
+
+
+.input-complex {
+  position: relative;
+  border-radius: 5px;
+}
+  .input-complex__side {
+    position: absolute;
+    top: 0;  bottom: 0;
+    left: 0;
+    width: 4.5rem;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+    background: #EFEEE9;
+    text-align: center;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+    }
+  }
+  .input-complex__icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    color: #C1C7C7;
+  }
+
+
+  .input-complex__field {
+    width: 100%;
+    padding-left: 6.2rem;
+  }
+
+
+
+.check {
+  cursor: pointer;
+}
+  .check__input {
+    display: none;
+  }
+  .check__fake {
+    position: relative;
+    top: .25em;
+    display: inline-block;
+    width:  20px;
+    height: 20px;
+    margin-right: 6px;
+    border: 1px solid $gray;
+    border-radius: 2px;
+    background: #fff;
+    color: $green;
+    overflow: hidden;
+  }
+    .check__fake:after {
+      content: '';
+      position: absolute;
+      top: 0;  bottom: 0;
+      left: 0;  right: 0;
+      margin: auto;
+      opacity: 0;
+      transform-origin: 66% 66%;
+      transition: opacity .25s;
+    }
+
+  .check__label {
+    color: rgba($textColor, .8);
+    cursor: pointer;
+  }
+
+  .check__input:checked + .check__fake:after {
+    opacity: 1;
+  }
+
+
+.check--checkbox {}
+  .check--checkbox .check__fake {
+
+    &:after {
+      right: 2px;  bottom: 2px;
+      width:   6px;
+      height: 10px;
+      border: 2px solid;
+      border-top:  none;
+      border-left: none;
+      transform: rotate(45deg);
+    }
+  }
+  .check--checkbox  .check__input:checked + .check__fake {
+    border-color: transparent;
+    background: $green;
+    color: $white;
+  }
+
+
+.check--radio {}
+  .check--radio .check__fake {
+    border-radius: 50%;
+
+    &:after {
+      width:  8px;
+      height: 8px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+  }
+
+
+.check--highlight {}
+  .check--highlight  .check__input:checked ~ .check__label {
+    color: $green;
+  }
+
+
+.check-group {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+  .check-group__item {}
+
+.check-group--inline {}
+  .check-group--inline  .check-group__item {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 3.7rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
