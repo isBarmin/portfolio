@@ -30,6 +30,7 @@ $.gulp.task('build', $.gulp.series(
     'copy:image',
     'copy:fonts',
     'copy:assets',
+    'copy:userfiles',
     'css:foundation',
     'sprite:svg',
     'sprite:img'
@@ -47,6 +48,7 @@ $.gulp.task('default', $.gulp.series(
     'copy:image',
     'copy:fonts',
     'copy:assets',
+    'copy:userfiles',
     'css:foundation',
     'sprite:svg',
     'sprite:img'
