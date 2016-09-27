@@ -6,7 +6,40 @@
   color: $white;
   font-size: 0;
   text-align: center;
+
+  // цветовой фильтр
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;  right: 0;
+    top: 0;  bottom: 0;
+    background: rgba(#016672, .3);
+  }
 }
+
+  // фоновая надпись
+  .first__bg-text {
+    position: absolute;
+    left: 0;  right: 0;
+    top: 0;  bottom: 0;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+    }
+
+    & svg {
+      width: 100%;
+      max-width: 1200px;
+      height: 25vw;
+      display: inline-block;
+      vertical-align: middle;
+      fill: rgba($white, .06);
+    }
+  }
+
 
   .first__me {
     position: absolute;
