@@ -4,12 +4,10 @@
   box-sizing: inherit;
 }
 
-html, body {
-  height: 100%;
-}
 
 html {
   box-sizing: border-box;
+  height: 100%;
   background: #fff;
   color: $textColor;
   font: 10px/1.5 Roboto, sans-serif;
@@ -17,6 +15,7 @@ html {
 
 body {
   position: relative;
+  min-height: 100%;
   font-size: 1.6rem;
 }
 
@@ -44,11 +43,6 @@ body {
   }
 
 
-.wrapper {
-  min-height: 100%;
-  margin-bottom: -72px;
-  padding-bottom: 72px;
-}
 .container {
   max-width: 1200px;
   margin: auto;
