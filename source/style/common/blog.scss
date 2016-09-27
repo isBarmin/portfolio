@@ -1,0 +1,37 @@
+.blog {
+  position: relative;
+  padding: 6.2rem 0 21.5rem;
+  line-height: 1.625;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 0;  right: 0;
+    height: 8.9vw;
+    background:
+      linear-gradient(to top left , $white 49.9%, transparent 50.1%) right,
+      linear-gradient(to top right, $white 49.9%, transparent 50.1%) left;
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+  }
+}
+
+  .blog__side {
+    float: left;
+    width: 31rem;
+    padding-left: 4rem;
+    text-align: right;
+  }
+
+  .blog__menu {
+    &:first-child {
+      padding-top: .7rem;
+    }
+  }
+
+
+  .blog__main {
+    padding: 0 11rem 0 10rem;
+    margin-left: 31rem;
+  }

@@ -41,6 +41,36 @@
   }
 
 
+
+  .first__title-wrap {
+    position: relative;
+  }
+    .first__title {
+      margin-bottom: 0;
+      font-size: 6.3rem;
+      line-height: 1;
+
+      &:before,
+      &:after {
+        background: rgba($white, .5);
+      }
+    }
+
+    .first__background-title {
+      position: absolute;
+      left: 50%;  top: 50%;
+      transform: translate(-50%, -50%);
+
+      & svg {
+        fill: rgba($white, .07);
+        transform: scale(1.4);
+      }
+    }
+
+    .first__desc {}
+
+
+
   .first__me {
     position: absolute;
     left: 0;  right: 0;

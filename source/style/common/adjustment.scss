@@ -21,6 +21,18 @@ body {
 
 
 
+p {
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+
 ::selection {
   background: rgba($green, .8);
   color: rgba(255,255,255,.9);
@@ -64,9 +76,9 @@ body {
     content: '';
     position: absolute;
     top: .475em;
-    width:  .65em;
-    height: .145em;
-    background: $gray;
+    width: 22px;
+    height: 5px;
+    background: rgba($black, .2);
   }
   &:before {
     left: 0;
