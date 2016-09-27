@@ -1,0 +1,31 @@
+.skills {}
+
+  .skills__section {
+    margin-bottom: 3.9rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+    .skills__caption {
+      margin-bottom: .625em;
+      font-size: 2.8rem;
+      line-height: 1.143;
+      font-weight: 600;
+
+    }
+
+    .skills__item {
+      display: inline-block;
+      vertical-align: middle;
+      width:  12rem;
+      height: 12rem;
+      margin-right: 4rem;
+      border-radius: 50%;
+      background: $green;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }

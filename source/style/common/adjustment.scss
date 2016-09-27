@@ -52,11 +52,12 @@ body {
 .title {
   position: relative;
   display: table;
-  margin: auto;
+  margin: 0 auto .7em;
   padding: 0 1em;
   font-family: Bernier, sans-serif;
   font-size: 3.5rem;
   line-height: 1.171;
+  text-align: center;
 
   &:before,
   &:after {
