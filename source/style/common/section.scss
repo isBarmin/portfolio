@@ -27,6 +27,41 @@
     }
 
 
+  .section__line {
+    margin-bottom: 6rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+
+.section__btn-top {
+  display: block;
+  width:  6rem;
+  height: 6rem;
+  margin: auto;
+  border-radius: 50%;
+  color: $white;
+  font-family: Fontawesome;
+  font-size: 2.8rem;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: .7;
+  transition: opacity .5s;
+
+  &:before {
+    content: '\f077 ';
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+
 
 .section__corner {
   position: relative;
@@ -85,3 +120,21 @@
 
 
 .section--slider {}
+
+
+
+.section--about-me {
+  position: relative;
+  padding-bottom: 19rem;
+  background: url(../img/bg/bg-sea.jpg)  no-repeat top / cover;
+}
+
+  .section--about-me  .section__in {
+    max-width: 80rem;
+    margin: auto;
+  }
+
+  .section--about-me  .section__title {
+    padding-top:    2.825em;
+    padding-bottom: 2.825em;
+  }

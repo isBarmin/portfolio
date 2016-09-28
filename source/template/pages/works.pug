@@ -60,3 +60,56 @@ block content
 
             a.slider__control.slider__control--next(href="#404"  title="Следующий проект")
               img.slider__control-pic(src="assets/userfiles/work-2.png"  alt="")
+
+
+
+      .section.section--about-me
+        .section__in
+          .section__title.double-title
+            .double-title__text.title Что обо мне говорят
+            svg.double-title__bg.double-title__bg--lg
+              use(xlink:href='assets/img/sprite.svg#about_header')
+
+
+          .section__line
+            .testimonials
+              .testimonials__item.testimonial
+                .testimonial__content
+                  p Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
+                .testimonial__info
+                  .testimonial__avatar(style="background-image: url(assets/userfiles/user-ava-1.jpg);")
+                  .testimonial__info-who
+                    .testimonial__name Ковальчук Дмитрий
+                    .testimonial__desc основатель Loftchool
+
+              .testimonials__item.testimonial
+                .testimonial__content
+                  p Этот код выдержет любые испытания. Только, пожалуйста, не загружйте сайт в слишком сарых браузерах!
+                .testimonial__info
+                  .testimonial__avatar(style="background-image: url(assets/userfiles/user-ava-2.jpg);")
+                  .testimonial__info-who
+                    .testimonial__name Зар Захаров
+                    .testimonial__desc главный преподаватель
+
+
+
+          .section__line
+            .form-modal
+              .form-modal__body
+                .title.form-modal__title Связаться со мной
+
+                .form-row
+                  input.field(type="text", placeholder="Имя")
+
+                .form-row
+                  input.field(type="email", placeholder="Email")
+
+                .form-row
+                  textarea.field(placeholder="Ваше сообщение")
+
+              .form-modal__foot
+                button.btn.form-modal__btn(type="submit") Отправить
+                button.btn.form-modal__btn(type="reset") Очистить
+
+
+          a.section__btn-top(href="#top")
