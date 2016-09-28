@@ -1,8 +1,10 @@
 .double-title {
   position: relative;
+  max-width: 28em;
   text-align: center;
 }
   .double-title__text {
+    margin-bottom: 0;
     font-size: 6.3rem;
     line-height: 1.05;
     color: $textDark;
@@ -14,4 +16,8 @@
     margin-top: -.5em;
     fill: rgba($textDark, .07);
     transform: translate(-50%, -50%)  scale(1.2);
+
+    &--lg {
+      transform: translate(-50%, -50%)  scale(1.675);
+    }
   }

@@ -2,7 +2,7 @@
 
   .section__title {
     position: relative;
-    max-width: 32rem;
+    max-width: 9.5em;
     margin: auto;
   }
 
@@ -62,3 +62,26 @@
     background: linear-gradient(to top left, #EEEBDF 49.9%, transparent 50.1%) no-repeat;
   }
 }
+
+
+.section--works-title {
+  position: relative;
+  padding: 6rem 0 5rem;
+  background: #FBF8F1;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;  right: 0;
+    bottom: 100%;
+    height: 8.9vw;
+    background:
+      linear-gradient(to top right, #FBF8F1 49.9%, transparent 50.1%) left,
+      linear-gradient(to top left,  #FBF8F1 49.9%, transparent 50.1%) right;
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+  }
+}
+
+
+.section--slider {}
