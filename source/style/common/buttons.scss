@@ -19,10 +19,18 @@
   }
 }
   .btn__icon {
+    position: relative;
+    top: -.05em;
     display: inline-block;
     vertical-align: middle;
+    font-size: 1.25em;
+
+    & + .btn__text,
+    .btn__text + & {
+      margin-left: .65em;
+    }
   }
-  .btn__label {}
+  .btn__text {}
 
 
 .btn--clear {
