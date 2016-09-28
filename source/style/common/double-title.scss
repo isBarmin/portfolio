@@ -1,0 +1,17 @@
+.double-title {
+  position: relative;
+  text-align: center;
+}
+  .double-title__text {
+    font-size: 6.3rem;
+    line-height: 1.05;
+    color: $textDark;
+  }
+
+  .double-title__bg {
+    position: absolute;
+    top: 50%;  left: 50%;
+    margin-top: -.5em;
+    fill: rgba($textDark, .07);
+    transform: translate(-50%, -50%)  scale(1.2);
+  }
