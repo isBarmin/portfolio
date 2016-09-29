@@ -40,7 +40,6 @@
 
 
     // отображается другая сторона
-    .welcome__flipper:hover,
     .welcome__flipper--flip {
       transform: rotateY(180deg);
     }
