@@ -37,7 +37,7 @@ block content
             a.btn.form-modal__btn(href="#404") Блог
 
       .welcome__view.welcome__view--back
-        .form-modal
+        form.form-modal(name="login")
           .form-modal__body
             .title.form-modal__title Авторизуйтесь
 
@@ -45,13 +45,13 @@ block content
               .input-complex
                 .input-complex__side
                   i.input-complex__icon.fa.fa-user
-                input.field.input-complex__field(type="text", placeholder="Логин")
+                input.field.input-complex__field(type="text"  name="login"  placeholder="Логин")
 
             .form-row
               .input-complex
                 .input-complex__side
                   i.input-complex__icon.fa.fa-key
-                input.field.input-complex__field(type="password", placeholder="Пароль")
+                input.field.input-complex__field(type="password"  name="password"  placeholder="Пароль")
 
             .form-row
               label.check.check--checkbox

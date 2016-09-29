@@ -94,18 +94,18 @@ block content
 
 
           .section__line
-            .form-modal
+            form.form-modal(name="callback")
               .form-modal__body
                 .title.form-modal__title Связаться со мной
 
                 .form-row
-                  input.field(type="text", placeholder="Имя")
+                  input.field.field--full(type="text"  name="name"  placeholder="Имя")
 
                 .form-row
-                  input.field(type="email", placeholder="Email")
+                  input.field.field--full(type="email"  name="email"  placeholder="Email")
 
                 .form-row
-                  textarea.field(placeholder="Ваше сообщение")
+                  textarea.field.field--full(name="message"  placeholder="Ваше сообщение")
 
               .form-modal__foot
                 button.btn.form-modal__btn(type="submit") Отправить

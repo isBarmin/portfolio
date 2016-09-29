@@ -3,7 +3,7 @@
   display: flex;
   flex-flow: column wrap;
   justify-content: space-around;
-  min-height: 100%;
+  min-height: 100vh;
   padding: 10rem 0;
   background: #fff url(../img/bg/bg-mountains.jpg)  no-repeat center / cover;
   text-align: center;
@@ -22,21 +22,25 @@
     margin: auto;
     transition: .6s;
     transform-style: preserve-3d;
-    backface-visibility: hidden;
   }
     .welcome__view {
-      float: left;
-      margin-right: -100%;
+      position: relative;
+      z-index: 10;
+      backface-visibility: hidden;
 
-      &:last-child {
+      &:not(.welcome__flipper--back) {
+        float: left;
+        margin-right: -100%;
+      }
+
+      &--back {
         transform: rotateY(180deg);
       }
     }
-    .welcome__view--back {
-      backface-visibility: hidden;
-    }
+
 
     // отображается другая сторона
+    .welcome__flipper:hover,
     .welcome__flipper--flip {
       transform: rotateY(180deg);
     }

@@ -54,10 +54,10 @@
   }
 
   & .nav__link {
-    transition: opacity .5s;
+    transition: color .5s;
 
     &:hover {
-      opacity: .5;
+      color: $green;
     }
   }
 }

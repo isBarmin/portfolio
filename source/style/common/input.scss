@@ -4,6 +4,22 @@
   border-radius: 5px;
   outline: none;
   background: #fff;
+  transition: border-color .5s;
+
+  &:focus {
+    border-color: $green;
+  }
+}
+
+textarea.field {
+  min-height: 8.7em;
+  max-height: 12em;
+  resize: none;
+}
+
+
+.field--full {
+  width: 100%;
 }
 
 
