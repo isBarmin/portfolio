@@ -2,6 +2,8 @@ window.onload = function () {
 
   (function() {
 
+    if( !document.getElementById('map') ) return;
+
     var map;
 
     DG.then(function () {
