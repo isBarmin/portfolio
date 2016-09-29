@@ -31,10 +31,18 @@ block content
                 li.social__item
                   a.social__btn.social__btn--in(href="#404", title="Linkedin")
 
-          .form-modal__foot
-            a.btn.form-modal__btn(href="#404") Мои работы
-            a.btn.form-modal__btn(href="#404") Обо мне
-            a.btn.form-modal__btn(href="#404") Блог
+          .form-modal__foot.btn-group
+            .btn-group__item
+              .btn-group__btn
+                a.btn.btn--crystal.btn-group__btn(href="works.html") Мои работы
+            .btn-group__item
+              .btn-group__btn
+                a.btn.btn--crystal.btn-group__btn(href="about.html") Обо мне
+            .btn-group__item
+              .btn-group__btn
+                a.btn.btn--crystal.btn-group__btn(href="blog.html") Блог
+
+
 
       .welcome__view.welcome__view--back
         form.form-modal(name="login")
@@ -75,9 +83,16 @@ block content
                     i.check__fake
                     span.check__label Не уверен
 
-          .form-modal__foot
-            a.btn.form-modal__btn(href="#404") На главную
-            button.btn.form-modal__btn(type="submit") Войти
+          .form-modal__foot.btn-group
+            .btn-group__item
+              .btn-group__btn
+                a.btn.btn--crystal.btn-group__btn(href="#404") На главную
+            .btn-group__item
+              .btn-group__btn
+                button.btn.btn--crystal.btn-group__btn(type="submit") Войти
+
+
+
 
 
     .welcome__copyright

@@ -41,3 +41,12 @@
     color: $green;
   }
 }
+
+
+.btn--crystal {
+  background: rgba($green, .85);
+
+  &:hover {
+    background: rgba(darken($green, 7%), .85);
+  }
+}

@@ -107,9 +107,13 @@ block content
                 .form-row
                   textarea.field.field--full(name="message"  placeholder="Ваше сообщение")
 
-              .form-modal__foot
-                button.btn.form-modal__btn(type="submit") Отправить
-                button.btn.form-modal__btn(type="reset") Очистить
+              .form-modal__foot.btn-group
+                .btn-group__item
+                  .btn-group__btn
+                    button.btn.btn--crystal.btn-group__btn(type="submit") Отправить
+                .btn-group__item
+                  .btn-group__btn
+                    button.btn.btn--crystal.btn-group__btn(type="reset") Очистить
 
 
           a.section__btn-top(href="#top")
