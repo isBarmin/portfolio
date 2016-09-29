@@ -8,6 +8,28 @@
 
   &:focus {
     border-color: $green;
+
+    & + .input-complex__side {
+      border-right-color: $green;
+    }
+  }
+
+  &--ok {
+    border-color: $green;
+
+    & + .input-complex__side {
+      border-right-color: currentColor;
+      color: $green;
+    }
+  }
+
+  &--error {
+    border-color: $red;
+
+    & + .input-complex__side {
+      border-right-color: currentColor;
+      color: $red;
+    }
   }
 }
 
@@ -33,10 +55,17 @@ textarea.field {
     top: 0;  bottom: 0;
     left: 0;
     width: 4.5rem;
-    border-top-left-radius: inherit;
+    border: 1px solid transparent;
+    border-top:    none;
+    border-bottom: none;
+    border-top-left-radius:    inherit;
     border-bottom-left-radius: inherit;
     background: #EFEEE9;
+    color: #C1C7C7;
     text-align: center;
+    transition:
+      color .5s,
+      border-color .5s;
 
     &:before {
       content: '';
@@ -50,7 +79,7 @@ textarea.field {
     vertical-align: middle;
     width: 20px;
     height: 20px;
-    color: #C1C7C7;
+    color: inherit;
   }
 
 
