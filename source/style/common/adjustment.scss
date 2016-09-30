@@ -28,11 +28,11 @@ a {
 
 p {
   &:first-child {
-    margin-top: 0;
+    margin-top: 0 !important;
   }
 
   &:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
   }
 }
 
@@ -75,7 +75,7 @@ button {
   position: relative;
   display: table;
   margin: 0 auto .7em;
-  padding: 0 1em;
+  padding: 0 .675em;
   font-family: Bernier, sans-serif;
   font-size: 3.5rem;
   line-height: 1.171;

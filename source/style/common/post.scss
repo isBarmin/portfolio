@@ -36,7 +36,7 @@
   }
 
   .post__info {
-    margin-bottom: 1.9rem;
+    margin-bottom: 1.5rem;
   }
 
     .post__date {
@@ -45,5 +45,9 @@
 
 
   .post__entry {
+    max-width: 89rem;
 
+    p {
+      margin: .7em 0;
+    }
   }
