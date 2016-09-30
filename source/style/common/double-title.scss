@@ -1,12 +1,14 @@
 .double-title {
   position: relative;
   max-width: 28em;
+  color: $textDark;
   text-align: center;
 }
   .double-title__text {
+    z-index: 5;
     margin-bottom: 0;
     padding: 0 .675em;
-    color: $textDark;
+    color: inherit;
     font-size: 6.3rem;
     line-height: 1.05;
     letter-spacing: 1px;
@@ -16,7 +18,7 @@
     position: absolute;
     top: 50%;  left: 50%;
     margin-top: -.5em;
-    fill: inherit;
+    fill: currentColor;
     opacity: .07;
     transform: translate(-50%, -50%)  scale(1.2);
 
@@ -24,3 +26,13 @@
       transform: translate(-50%, -50%)  scale(1.675);
     }
   }
+
+
+
+.double-title--blog {
+
+  &  .double-title__bg {
+    margin-top: 1em;
+    transform: translate(-50%, -50%)  scale(1.4);
+  }
+}

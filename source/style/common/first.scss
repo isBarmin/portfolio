@@ -48,19 +48,7 @@
   }
     .first__title {
       margin-bottom: 0;
-      font-size: 6.3rem;
-      line-height: 1;
-    }
-
-    .first__background-title {
-      position: absolute;
-      left: 50%;  top: 50%;
-      transform: translate(-50%, -50%);
-
-      & svg {
-        fill: rgba($white, .07);
-        transform: scale(1.4);
-      }
+      color: inherit;
     }
 
     .first__desc {}
