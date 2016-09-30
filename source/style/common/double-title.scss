@@ -5,9 +5,11 @@
 }
   .double-title__text {
     margin-bottom: 0;
+    padding: 0 .675em;
+    color: $textDark;
     font-size: 6.3rem;
     line-height: 1.05;
-    color: $textDark;
+    letter-spacing: 1px;
   }
 
   .double-title__bg {

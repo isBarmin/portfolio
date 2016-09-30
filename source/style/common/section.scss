@@ -28,7 +28,7 @@
 
 
   .section__line {
-    margin-bottom: 6rem;
+    margin-bottom: 5.8rem;
 
     &:last-child {
       margin-bottom: 0;
@@ -101,7 +101,7 @@
 
 .section--works-title {
   position: relative;
-  padding: 6rem 0 5rem;
+  padding: 6rem 0;
   background: #FBF8F1;
 
   &:before {
@@ -125,6 +125,7 @@
 
 .section--about-me {
   position: relative;
+  padding-top: 1.4rem;
   padding-bottom: 19rem;
   background: url(../img/bg/bg-sea.jpg)  no-repeat top / cover;
 }

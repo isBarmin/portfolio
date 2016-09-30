@@ -1,5 +1,5 @@
 .field {
-  padding: .5em 1em;
+  padding: .595em 1.1em;
   border: 1px solid transparent;
   border-radius: 5px;
   outline: none;
@@ -34,7 +34,8 @@
 }
 
 textarea.field {
-  min-height: 8.7em;
+  vertical-align: top;
+  min-height: 8.8em;
   max-height: 12em;
   resize: none;
 }
@@ -102,7 +103,7 @@ textarea.field {
     display: inline-block;
     width:  20px;
     height: 20px;
-    margin-right: 6px;
+    margin-right: .55em;
     border: 1px solid $gray;
     border-radius: 2px;
     background: #fff;
@@ -132,6 +133,7 @@ textarea.field {
 
 .check--checkbox {}
   .check--checkbox .check__fake {
+    margin-right: .625em;
 
     &:after {
       right: 2px;  bottom: 2px;

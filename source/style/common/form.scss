@@ -7,7 +7,12 @@
 }
 
   .form-row__caption {
-    margin-bottom: .4em;
+    margin-bottom: .25em;
     color: rgba($textColor, .8);
     font-weight: bold;
   }
+
+
+.form-row--near {
+  margin-bottom: 1.2rem;
+}

@@ -3,7 +3,7 @@
 }
 
   .testimonial__content {
-    margin-bottom: 1.4em;
+    margin-bottom: 1.2em;
 
     &:before {
       content: '\f10d';
@@ -13,6 +13,10 @@
       font-family: Fontawesome;
       font-size: 2.2em;
       line-height: 1;
+    }
+
+    p {
+      line-height: 1.65;
     }
   }
 

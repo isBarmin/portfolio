@@ -13,7 +13,7 @@ block content
     a.btn.btn--clear.welcome__btn-auth(href="#404") Авторизоваться
 
     .welcome__flipper
-      .welcome__view
+      .welcome__view.welcome__view--back
         .form-modal
           .form-modal__body
             .form-modal__section
@@ -44,7 +44,7 @@ block content
 
 
 
-      .welcome__view.welcome__view--back
+      .welcome__view
         form.form-modal(name="login")
           .form-modal__body
             .title.form-modal__title Авторизуйтесь
@@ -61,7 +61,7 @@ block content
                 .input-complex__side
                   i.input-complex__icon.fa.fa-key
 
-            .form-row
+            .form-row.form-row--near
               label.check.check--checkbox
                 input.check__input(type="checkbox", name="is-human", checked)
                 i.check__fake
@@ -83,7 +83,7 @@ block content
                     i.check__fake
                     span.check__label Не уверен
 
-          .form-modal__foot.btn-group
+          .form-modal__foot.btn-group.btn-group--equal
             .btn-group__item
               .btn-group__btn
                 a.btn.btn--crystal.btn-group__btn(href="#404") На главную
