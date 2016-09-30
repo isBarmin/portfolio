@@ -1,5 +1,6 @@
 window.onload = function () {
 
+  // Работа главного меню
   (function() {
 
     $(document).on('click', '.nav__trigger', function(e) {
@@ -31,6 +32,38 @@ window.onload = function () {
 
 
 
+  // Работа двухсторонней карточки на главной странице
+  (function() {
+
+    var welcome = $('.welcome');
+
+    if( !welcome === 0 ) return;
+
+
+    welcome.on('click', '[data-flip="toggle"]', function(e) {
+      var trigger     = $(this);
+      var initTrigger = welcome.find('.welcome__btn-auth');
+      var flipper     = welcome.find('.welcome__flipper');
+      var duration    = 500;
+
+
+      flipper.toggleClass('welcome__flipper--flip');
+
+      if(flipper.hasClass('welcome__flipper--flip')) {
+        initTrigger.fadeOut( duration );
+      } else {
+        initTrigger.fadeIn( duration );
+      }
+
+    });
+
+  })();
+
+
+
+
+
+  // Карта
   (function() {
 
     if( !document.getElementById('map') ) return;

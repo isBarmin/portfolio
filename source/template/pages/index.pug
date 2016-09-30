@@ -10,10 +10,10 @@ block variables
 block content
   .welcome
 
-    a.btn.btn--clear.welcome__btn-auth(href="#404") Авторизоваться
+    a.btn.btn--clear.welcome__btn-auth(href="#404"  data-flip="toggle") Авторизоваться
 
     .welcome__flipper
-      .welcome__view.welcome__view--back
+      .welcome__view
         .form-modal
           .form-modal__body
             .form-modal__section
@@ -44,7 +44,7 @@ block content
 
 
 
-      .welcome__view
+      .welcome__view.welcome__view--back
         form.form-modal(name="login")
           .form-modal__body
             .title.form-modal__title Авторизуйтесь
@@ -63,7 +63,7 @@ block content
 
             .form-row.form-row--near
               label.check.check--checkbox
-                input.check__input(type="checkbox", name="is-human", checked)
+                input.check__input(type="checkbox", name="is-human")
                 i.check__fake
                 span.check__label Я человек
 
@@ -73,7 +73,7 @@ block content
               ul.check-group.check-group--inline
                 li.check-group__item
                   label.check.check--radio.check--highlight
-                    input.check__input(type="radio", name="really-human", checked)
+                    input.check__input(type="radio", name="really-human")
                     i.check__fake
                     span.check__label Да
 
@@ -86,7 +86,7 @@ block content
           .form-modal__foot.btn-group.btn-group--equal
             .btn-group__item
               .btn-group__btn
-                a.btn.btn--crystal.btn-group__btn(href="#404") На главную
+                a.btn.btn--crystal.btn-group__btn(href="#404"  data-flip="toggle") На главную
             .btn-group__item
               .btn-group__btn
                 button.btn.btn--crystal.btn-group__btn(type="submit") Войти
