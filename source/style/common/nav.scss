@@ -4,9 +4,16 @@
 
   .nav__trigger {
     position: relative;
+    z-index: 110;
     width:  40px;
     height: 35px;
     cursor: pointer;
+
+    &:hover {
+      color: $green;
+    }
+
+
   }
     .nav__trigger-line {
       position: absolute;
@@ -14,7 +21,13 @@
       height: 5px;
       margin: auto;
       border-radius: 5px;
-      background: $white;
+      background: currentColor;
+      transition:
+        color .5s,
+        opacity .5s,
+        transform .5s,
+        top .5s,
+        bottom .5s;
 
       &:nth-child(1) {
         top: 0;
@@ -28,16 +41,23 @@
       }
     }
 
+    .nav__drop {}
+
+
+
     .nav__list {
       margin: 0;
       padding: 0;
       list-style: none;
     }
+
       .nav__item {}
+
         .nav__link {
           color: inherit;
           text-decoration: none;
         }
+
 
 
 // навигация в одну линию
@@ -63,9 +83,112 @@
 }
 
 
+
 // навигация с гамбургером
-.nav--mobile {
-  & .nav__list {
+.nav--main {
+  font: 6.3rem/1.5 Bernier, sans-serif;
+
+  & .nav__drop {
     display: none;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;  right: 0;
+    height: 100%;
+    padding: 10rem 0;
+    text-align: center;
+    overflow: auto;
+
+    &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;  bottom: 0;
+        width: 0;
+        background: rgba($green, .9);
+        transition: width .5s;
+      }
+
+      &:before {
+        left: 0;
+      }
+      &:after {
+        right: 0;
+      }
+  }
+
+  & .nav__list {
+    margin: auto;
+    max-width: 50rem;
+  }
+
+  & .nav__item {
+    margin-bottom: 1.25em;
+    opacity: 0;
+    transition: opacity .3s;
+  }
+
+  & .nav__link {
+    margin: auto;
+    padding: 0 .625em;
+    font-size: inherit;
+
+    &:before,
+    &:after {
+      width: 0;
+      transition: width .25s;
+    }
+
+    &:hover {
+      &:before,
+      &:after {
+        width: 2.2rem;
+      }
+    }
+  }
+}
+
+
+
+.nav--open {
+  &  .nav__trigger {
+    &:hover {
+      color: $red;
+    }
+
+    &  .nav__trigger-line:nth-child(1) {
+      top: calc(50% - 2px);
+      transform: rotate(225deg);
+    }
+    &  .nav__trigger-line:nth-child(2) {
+      opacity: 0;
+      transform: rotateY(-180deg);
+    }
+    &  .nav__trigger-line:nth-child(3) {
+      bottom: calc(50% - 2px);
+      transform: rotate(-225deg);
+    }
+  }
+
+  .nav__drop {
+    &:before,
+    &:after {
+      width: 50%;
+    }
+  }
+
+  &  .nav__list {
+    position: relative;
+    z-index: 10;
+  }
+
+  &  .nav__item {
+    opacity: 1;
+
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        transition-delay: .35s * $i;
+      }
+    }
   }
 }

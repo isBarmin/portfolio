@@ -88,7 +88,8 @@ button {
     top: .475em;
     width: 22px;
     height: 5px;
-    background: rgba($black, .2);
+    background: currentColor;
+    opacity: .2;
   }
   &:before {
     left: 0;

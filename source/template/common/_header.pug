@@ -10,18 +10,19 @@ header.header
 
 
   .header__part
-    nav.nav.nav--mobile
+    nav.nav.nav--main
       .nav__trigger
         .nav__trigger-line
         .nav__trigger-line
         .nav__trigger-line
 
-      ul.nav__list
-        li.nav__item
-          a.nav__link(href="#404") Мои работы
-        li.nav__item
-          a.nav__link(href="#404") Обо мне
-        li.nav__item
-          a.nav__link(href="#404") Блог
-        li.nav__item
-          a.nav__link(href="#404") Авторизация
+      .nav__drop
+        ul.nav__list
+          li.nav__item
+            a.nav__link.title(href="works.html") Мои работы
+          li.nav__item
+            a.nav__link.title(href="about.html") Обо мне
+          li.nav__item
+            a.nav__link.title(href="blog.html") Блог
+          li.nav__item
+            a.nav__link.title(href="#404") Авторизация

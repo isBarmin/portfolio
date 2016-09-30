@@ -2,8 +2,8 @@
   @extend %clearfix;
 
   position: absolute;
+  z-index: 20;
   left: 0;  right: 0;
-  z-index: 10;
   padding: 2.7rem 3rem;
 }
 
