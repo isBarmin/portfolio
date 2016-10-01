@@ -26,7 +26,7 @@ block content
 
 
 
-  .section
+  .section.section--about
     .section__row
       .section__col.section__col-1-2.section__corner.section__i
         .section__content
@@ -75,10 +75,17 @@ block content
 
 
 
-  .section.map
-    .map__container#map
-    .map__contacts
-      .map__title.title Контакты
-      include ../common/_contacts
 
-  script(src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full", defer)
+  .section.map
+    .section__body.map__self#map
+
+    .section__body.map__content
+      .map__contacts
+        .map__title.title Контакты
+        include ../common/_contacts
+
+      script(src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full", defer)
+
+
+    .section__foot
+      include ../common/_footer
