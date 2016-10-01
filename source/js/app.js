@@ -63,6 +63,44 @@ window.onload = function () {
 
 
 
+  // Прокрутить страницу до ...
+  (function() {
+
+    $(document).on('click', '[data-go]', function(e) {
+      e.preventDefault();
+
+      var btn        = $(this);
+      var target     = btn.attr('data-go');
+      var container  = null;
+
+
+      function scrollToPosition(position, duration) {
+        var position = position || 0;
+        var duration = duration || 500;
+
+
+        $("body, html").animate({
+          scrollTop: position
+        }, duration);
+      }
+
+
+      if (target == 'top') {
+        scrollToPosition();
+      }
+
+      if (target == 'next') {
+        container = btn.closest('.section');
+        scrollToPosition( container.height(), 1000 );
+      }
+    });
+
+  })();
+
+
+
+
+
   // Карта
   (function() {
 
