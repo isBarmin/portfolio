@@ -135,6 +135,7 @@
 
     &:before,
     &:after {
+      top: .54em;
       width: 0;
       transition: width .25s;
     }
@@ -143,6 +144,7 @@
       &:before,
       &:after {
         width: 2.2rem;
+        opacity: .5;
       }
     }
   }
@@ -157,16 +159,14 @@
     }
 
     &  .nav__trigger-line:nth-child(1) {
-      top: calc(50% - 2px);
-      transform: rotate(225deg);
+      transform: translateY(15px)  rotate(225deg);
     }
     &  .nav__trigger-line:nth-child(2) {
       opacity: 0;
       transform: rotateY(-180deg);
     }
     &  .nav__trigger-line:nth-child(3) {
-      bottom: calc(50% - 2px);
-      transform: rotate(-225deg);
+      transform: translateY(-15px)  rotate(-225deg);
     }
   }
 
@@ -187,7 +187,7 @@
 
     @for $i from 1 through 5 {
       &:nth-child(#{$i}) {
-        transition-delay: .35s * $i;
+        transition-delay: .4s + (.15 * $i);
       }
     }
   }

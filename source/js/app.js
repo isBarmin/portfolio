@@ -12,9 +12,9 @@ window.onload = function () {
 
         drop.fadeOut( 500 , function() {
           nav.removeClass('nav--open');
+          $('body').css('overflow', '');
         });
 
-        $('body').css('overflow', '');
 
       } else {
 
