@@ -44,9 +44,9 @@
 
 
 .btn--crystal {
-  background: rgba($green, .85);
+  background: rgba($green, .5);
 
   &:hover {
-    background: rgba(darken($green, 7%), .85);
+    background: rgba(darken($green, 7%), .5);
   }
 }
