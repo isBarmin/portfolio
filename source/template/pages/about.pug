@@ -58,33 +58,36 @@ block content
           .skills
             .skills__section
               .skills__caption Frontend
-              .skills__item
-                +pie-chart(90, 'HTML5')
-              .skills__item
-                +pie-chart(90, 'CSS3')
-              .skills__item
-                +pie-chart(60, 'JavaScript & jQuery')
+              .skills__container
+                .skills__item
+                  +pie-chart(90, 'HTML5')
+                .skills__item
+                  +pie-chart(90, 'CSS3')
+                .skills__item
+                  +pie-chart(60, 'JavaScript & jQuery')
 
 
             .skills__section
               .skills__caption Backend
-              .skills__item
-                +pie-chart(30, 'PHP')
-              .skills__item
-                +pie-chart(30, 'mySQL')
-              .skills__item
-                +pie-chart(30, 'Node.js & npm')
-              .skills__item
-                +pie-chart(30, 'Mongo.db')
+              .skills__container
+                .skills__item
+                  +pie-chart(30, 'PHP')
+                .skills__item
+                  +pie-chart(30, 'mySQL')
+                .skills__item
+                  +pie-chart(30, 'Node.js & npm')
+                .skills__item
+                  +pie-chart(30, 'Mongo.db')
 
             .skills__section
               .skills__caption WorkFlow
-              .skills__item
-                +pie-chart(40, 'Git')
-              .skills__item
-                +pie-chart(50, 'Gulp')
-              .skills__item
-                +pie-chart(50, 'Bower')
+              .skills__container
+                .skills__item
+                  +pie-chart(40, 'Git')
+                .skills__item
+                  +pie-chart(50, 'Gulp')
+                .skills__item
+                  +pie-chart(50, 'Bower')
 
 
 

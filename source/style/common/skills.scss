@@ -15,14 +15,14 @@
       font-weight: 600;
     }
 
-    .skills__item {
-      display: inline-block;
-      vertical-align: middle;
-      width:  12rem;
-      height: 12rem;
-      margin-right: 4rem;
-
-      &:last-child {
-        margin-right: 0;
-      }
+    .skills__container {
+      margin: -2rem -2rem 0;
+      font-size: 0;
     }
+
+      .skills__item {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 2rem 2rem 0;
+        font-size: 1.6rem;
+      }

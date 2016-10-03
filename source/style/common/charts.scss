@@ -22,6 +22,7 @@
       fill: transparent;
       stroke: $green;
       stroke-dasharray: inherit;
+      transition: stroke-dasharray .8s;
    }
 }
 
