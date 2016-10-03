@@ -88,6 +88,19 @@
     height: 8.9vw;
     background: linear-gradient(to top right, #EFEEE9 49.9%, transparent 50.1%) no-repeat;
   }
+
+  &  .section__content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  & .section__title {
+    flex-grow: 1;
+    margin: 0;
+    padding: 0 5rem;
+  }
 }
 
 
