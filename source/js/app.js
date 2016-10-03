@@ -106,7 +106,7 @@ window.onload = function () {
 
     var map = document.getElementById('map');
 
-    if( map.length === 0 ) return;
+    if( map === null ) return;
 
 
     // параметры карты
