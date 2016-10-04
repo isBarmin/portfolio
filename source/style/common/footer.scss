@@ -27,3 +27,41 @@
       .footer__desc {
         max-width: 32em;
       }
+
+
+
+@include tablets {
+  .footer {
+    text-align: center;
+  }
+
+    .footer__section {}
+
+      .footer__part {
+        display: block;
+        width: auto;
+        margin-bottom: 2rem;
+
+        &:last-child {
+          margin-bottom: 0;
+          text-align: inherit;
+        }
+      }
+
+        .footer__desc {
+          max-width: none;
+          margin: auto;
+        }
+}
+
+
+
+@include phones {
+  .footer {
+    font-size: 13px;
+  }
+
+    .footer__section {
+      font-size: inherit;
+    }
+}
