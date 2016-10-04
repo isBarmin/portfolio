@@ -27,3 +27,46 @@
       .footer__desc {
         max-width: 32em;
       }
+
+
+
+@include tablets {
+  .footer {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+    .footer__section {
+      padding-left:  2rem;
+      padding-right: 2rem;
+      font-size: inherit;
+    }
+
+      .footer__part {
+        display: block;
+        width: auto;
+        margin-bottom: 2rem;
+        font-size: inherit;
+
+        &:last-child {
+          text-align: inherit;
+          margin-bottom: 0;
+        }
+      }
+
+        .footer__desc {
+          max-width: none;
+        }
+}
+
+
+@include phones {
+  .footer {
+    font-size: 1.3rem;
+  }
+
+    .footer__section {
+      padding-left:  1rem;
+      padding-right: 1rem;
+    }
+}

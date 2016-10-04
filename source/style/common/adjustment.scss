@@ -98,3 +98,11 @@ button {
     right: 0;
   }
 }
+
+
+
+@include tablets {
+  body {
+    font-size: 1.4rem;
+  }
+}

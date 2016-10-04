@@ -91,3 +91,11 @@
       opacity: 1;
     }
   }
+
+
+
+@include tablets {
+  .first__bg-text {
+    display: none;
+  }
+}
