@@ -17,9 +17,15 @@
       display: inline-block;
       vertical-align: middle;
       width: 50%;
+      padding: 0 1rem;
       font-size: 1.6rem;
 
+      &:first-child {
+        padding-left: 0;
+      }
+
       &:last-child {
+        padding-right: 0;
         text-align: right;
       }
     }
@@ -28,6 +34,21 @@
         max-width: 32em;
       }
 
+      .footer__copyright {
+
+        br {
+          display: none;
+        }
+      }
+
+
+    .footer__nav {
+      width: 80%;
+    }
+    .footer__social {
+      width: 20%;
+    }
+
 
 
 @include tablets {
@@ -35,12 +56,17 @@
     text-align: center;
   }
 
-    .footer__section {}
+    .footer__section {
+      padding-left:  2rem;
+      padding-right: 2rem;
+      font-size: inherit;
+    }
 
       .footer__part {
         display: block;
         width: auto;
         margin-bottom: 2rem;
+        font-size: inherit;
 
         &:last-child {
           margin-bottom: 0;
@@ -58,10 +84,11 @@
 
 @include phones {
   .footer {
-    font-size: 13px;
+    font-size: 1.3rem;
   }
 
     .footer__section {
-      font-size: inherit;
+      padding-left:  1rem;
+      padding-right: 1rem;
     }
 }

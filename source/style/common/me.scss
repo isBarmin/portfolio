@@ -29,3 +29,11 @@
     font-weight: 300;
     opacity: .8;
   }
+
+
+
+@include phones {
+  .me__name {
+    font-size: 2.1rem;
+  }
+}
