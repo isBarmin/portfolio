@@ -7,7 +7,6 @@
   .double-title__text {
     z-index: 5;
     margin-bottom: 0;
-    // padding: 0 .675em;
     padding: 0 40px;
     color: inherit;
     font-size: 6.3rem;
@@ -40,18 +39,32 @@
 
 
 
+
+
 @include tablets {
-  .double-title__text {
-    font-size: 4.9rem;
+  .double-title {
+    max-width: none;
   }
 
-  .double-title__bg {
-     transform: translate(-50%, -50%)  scale(.75);
-  }
+    .double-title__text {
+      font-size: 4.9rem;
+    }
+
+    .double-title__bg {
+       transform: translate(-50%, -50%)  scale(.75);
+    }
+    .double-title__bg--lg {
+       transform: translate(-50%, -50%)  scale(1.4);
+    }
 }
+
 
 @include phones {
   .double-title__text {
     font-size: 3.5rem;
+  }
+
+  .double-title__bg--lg {
+     transform: translate(-50%, -50%)  scale(.9);
   }
 }

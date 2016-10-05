@@ -33,6 +33,12 @@
   }
 }
 
+@mixin phones--lg {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}
+
 @mixin phones {
   @media screen and (max-width: 480px) {
     @content;

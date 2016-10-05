@@ -61,3 +61,47 @@
     width: 50%;
     font-size: 1.6rem;
   }
+
+
+
+
+
+@include tablets {
+  .testimonials__item {
+    font-size: 1.4rem;
+  }
+
+
+    .testimonial__content {
+
+      &:before {
+        margin-bottom: .325em;
+      }
+
+      p {
+        line-height: 1.714;
+      }
+    }
+}
+
+
+@include phones {
+  .testimonials__item {
+    display: block;
+    width: auto;
+    padding-left:  0;
+    padding-right: 0;
+  }
+
+    .testimonial__content {
+      &:before {
+        text-align: center;
+      }
+    }
+
+    .testimonial__avatar {
+      width:  16.4vw;
+      height: 16.4vw;
+      margin-right: 5vw;
+    }
+}

@@ -78,6 +78,7 @@
 
 
 
+// Секция "Что обо мне говорят"
 .section--about-me {
   position: relative;
   padding-top: 1.4rem;
@@ -87,10 +88,65 @@
   .section--about-me  .section__body {
     max-width: 80rem;
     margin: auto;
-    padding-bottom: 3rem;
+    padding: 0 2rem 3rem;
   }
 
   .section--about-me  .section__title {
     padding-top:    2.825em;
     padding-bottom: 2.825em;
   }
+
+
+
+
+
+@include tablets {
+  .section--works-title {
+    padding: 4rem 1rem;
+  }
+
+  .section__testimonials-wrap {
+    margin-bottom: 4rem;
+  }
+}
+
+
+@include phones {
+  .section__line {
+    margin-bottom: 12vw;
+  }
+
+  .section--about-me {
+    .section__body {
+      padding-bottom: 6vw;
+    }
+
+    .section__title {
+      padding-top:    5vw;
+      padding-bottom: 4vw;
+    }
+
+    & .double-title__text {
+      max-width: calc(5em + 80px);
+    }
+  }
+
+  .section__testimonials-wrap {
+    margin-bottom: 8vw;
+  }
+
+  .section__btn-top {
+    width:  17vw;
+    height: 17vw;
+  }
+}
+
+
+@include phones--sm {
+  .section--about-me {
+    .section__body {
+      padding-left:  1rem;
+      padding-right: 1rem;
+    }
+  }
+}
