@@ -99,3 +99,10 @@
     display: none;
   }
 }
+
+
+@include phones {
+  .first__me {
+    font-size: 1.4rem;
+  }
+}

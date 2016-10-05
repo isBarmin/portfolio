@@ -14,3 +14,27 @@
       float: right;
     }
   }
+
+  .header__social {}
+
+
+
+@include tablets {
+  .header {
+    padding-left:  2.3rem;
+    padding-right: 2.3rem;
+  }
+}
+
+
+@include phones {
+  .header {
+    padding: 1rem;
+  }
+
+    .header__social {
+      .social__btn {
+        font-size: 2.2rem;
+      }
+    }
+}

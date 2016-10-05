@@ -12,9 +12,8 @@
     &:hover {
       color: $green;
     }
-
-
   }
+
     .nav__trigger-line {
       position: absolute;
       width: 100%;
@@ -190,5 +189,13 @@
         transition-delay: .4s + (.15 * $i);
       }
     }
+  }
+}
+
+
+
+@include phones {
+  .nav__trigger {
+    transform: scale(.6);
   }
 }
