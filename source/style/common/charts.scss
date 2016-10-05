@@ -46,3 +46,19 @@
       transform: translateY(-50%);
    }
 }
+
+
+
+@include tablets {
+   .graph {
+      width:  11rem;
+      height: 11rem;
+   }
+
+   .graph--tor {
+
+      &:before {
+         font-size: 1.3rem;
+      }
+   }
+}

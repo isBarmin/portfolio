@@ -198,4 +198,10 @@
   .nav__trigger {
     transform: scale(.6);
   }
+
+  .nav--inline {
+    &  .nav__item {
+      margin-right: 1rem;
+    }
+  }
 }

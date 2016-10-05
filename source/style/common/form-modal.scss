@@ -60,3 +60,11 @@
     position: relative;
   }
 }
+
+
+
+@include phones {
+  .form-modal__title {
+    font-size: 3rem;
+  }
+}

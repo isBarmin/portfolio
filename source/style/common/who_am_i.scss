@@ -1,6 +1,6 @@
 .who-am-i {
   max-width: 442px;
-  margin: auto;
+  margin: 0 auto auto;
 }
 
   .who-am-i__photo-wrap {
@@ -24,3 +24,27 @@
 
   .who-am-i__content {}
 
+
+
+
+
+@include tablets {
+  .who-am-i {
+    max-width: 472px;
+  }
+
+    .who-am-i__title {
+      margin-bottom: .25em;
+    }
+}
+
+
+@include phones {
+  .who-am-i__photo-wrap {
+    margin-bottom: 2.3rem;
+  }
+
+  .who-am-i__title {
+    margin-bottom: 1rem;
+  }
+}
