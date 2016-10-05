@@ -50,3 +50,10 @@
     background: rgba(darken($green, 7%), .6);
   }
 }
+
+
+@include phones {
+  .btn {
+    font-size: 14px;
+  }
+}

@@ -1,12 +1,12 @@
 .form-modal {
-  width: 380px;
+  max-width: 380px;
   margin: auto;
   border-radius: 5px;
   text-align: center;
 }
 
   .form-modal__body {
-    padding: 33px 20px 37px;
+    padding: 3.3rem 2rem 3.7rem;
     border-top-left-radius:  inherit;
     border-top-right-radius: inherit;
     background: rgba($white, .8);

@@ -4,7 +4,7 @@
   flex-flow: column wrap;
   justify-content: space-around;
   min-height: 100vh;
-  padding: 10rem 0;
+  padding: 10rem 1rem;
   background: #fff url(../img/bg/bg-mountains.jpg)  no-repeat center / cover;
   text-align: center;
   perspective: 1000;
@@ -18,14 +18,15 @@
 
   // двухсторонний элемент
   .welcome__flipper {
-    width: 380px;
+    max-width: 380px;
     margin: auto;
-    transition: .6s;
+    transition: transform .6s;
     transform-style: preserve-3d;
   }
     .welcome__view {
       position: relative;
       z-index: 10;
+      width: 100%;
       backface-visibility: hidden;
 
       &:not(.welcome__flipper--back) {
@@ -53,4 +54,37 @@
     color: $white;
     font-weight: 300;
     text-align: center;
+
+    br {
+      display: none;
+    }
   }
+
+
+
+
+@include tablets {
+  .welcome {
+    padding-top:    7rem;
+    padding-bottom: 5.5rem;
+  }
+
+  .welcome__btn-auth {
+    top: 1rem;  right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+@include phones {
+  .welcome__copyright {
+    bottom: 1rem;
+
+    .divider {
+      display: none;
+    }
+
+    br {
+      display: block;
+    }
+  }
+}
