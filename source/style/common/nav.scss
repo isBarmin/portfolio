@@ -117,7 +117,7 @@
   & .nav__item {
     margin-bottom: 1.25em;
     opacity: 0;
-    transition: opacity .3s;
+    transition: opacity .5s;
 
     &:last-child {
       margin-bottom: 0;
@@ -126,7 +126,6 @@
 
   & .nav__link {
     margin: auto;
-    padding: 0 .625em;
     font-size: inherit;
 
     &:before,
@@ -173,10 +172,12 @@
 
   &  .nav__item {
     opacity: 1;
+    animation: showItems .25s forwards;
 
     @for $i from 1 through 5 {
       &:nth-child(#{$i}) {
-        transition-delay: .4s + (.15 * $i);
+        transition-delay: .25s + (.15 * $i);
+        animation-delay: .25s + (.15 * $i);
       }
     }
   }
@@ -202,11 +203,45 @@
   }
 }
 
+@keyframes showItems {
+  0% {
+    opacity: 0;
+    transform: scale(.8);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+@include laptop {
+  .nav--main {
+    &  .nav__item {
+      font-size: 6.7vmin;
+    }
+  }
+}
 
 
 @include phones {
   .nav__trigger {
     transform: scale(.6);
+  }
+
+  .nav--main {
+    &  .nav__drop {
+      padding: 5rem 2rem 3rem;
+    }
+    &  .nav__item {
+      font-size: 3rem;
+    }
   }
 
   .nav--inline {
