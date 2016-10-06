@@ -1,19 +1,13 @@
 .slider {
-  font-size: 0;
+  height: 100vh;
+  min-height: 600px;
 }
 
-  .slider__part {
-    display: inline-block;
-    vertical-align: top;
-    width: 50%;
-    height: 1px;
-    min-height: 75rem;
-    font-size: 1.6rem;
-  }
-
-
-
   .slider__desc {
+    display: flex;
+    float: left;
+    width: 50%;
+    height: 100%;
     padding: 2rem;
     background: #EFEEE9;
     text-align: center;
@@ -42,6 +36,7 @@
       border: 1px solid rgba($green, .3);
       border-left:  none;
       border-right: none;
+      font-size: 16px;
     }
       .slider__info-item {
         color: $green;
@@ -65,36 +60,32 @@
 
 
   .slider__view {
+    display: flex;
+    float: right;
+    width: 50%;
+    height: calc(100% - 22.5rem);
     background: #EFEBE0;
     text-align: center;
   }
-    .slider__image-container {
-      height: calc(100% - 22.5rem);
-      padding: 2rem;
 
-      &:before {
-        content: '';
-        display: inline-block;
-        vertical-align: middle;
-        height: 100%;
-        font-size: 0;
-      }
+    .slider__image {
+      display: block;
+      max-width:  90%;
+      max-height: 90%;
+      margin: auto;
     }
-      .slider__image {
-        display: inline-block;
-        vertical-align: middle;
-        max-width:  100%;
-        max-height: 100%;
-        margin: auto;
-      }
+
 
     .slider__controls {
+      float: right;
+      width: 50%;
       font-size: 0;
     }
 
       .slider__control {
         position: relative;
         display: inline-block;
+        display: inline-flex;
         vertical-align: top;
         width: 50%;
         height: 22.5rem;
@@ -143,8 +134,8 @@
       }
         .slider__control-pic {
           display: block;
-          max-width:  100%;
-          max-height: 100%;
+          max-width:  90%;
+          max-height: 90%;
           margin: auto;
         }
 
@@ -164,3 +155,70 @@
           content: '\f077';
         }
       }
+
+
+
+
+@include tablets {
+  .slider {
+    display: flex;
+    flex-flow: row wrap;
+    height: auto;
+    min-height: 0;
+  }
+
+    .slider__desc,
+    .slider__view,
+    .slider__controls {
+      width: 100%;
+    }
+
+    .slider__view {
+      order: -1;
+      height: 68vw;
+    }
+
+    .slider__desc {
+      padding: 5.75% 2rem 8%;
+    }
+
+      .slider__desc-in {
+        display: block;
+        max-width: none;
+
+        &:after {
+          display: none;
+        }
+      }
+
+        .slider__title {
+          margin-bottom: 1.3rem;
+        }
+
+        .slider__info {
+          max-width: 35rem;
+          margin: 0 auto 2rem;
+        }
+
+
+    .slider__control {
+      height: 28vw;
+    }
+}
+
+
+@include phones {
+  .slider__desc {
+    padding-left:  1rem;
+    padding-right: 1rem;
+  }
+
+  .slider__info {
+    max-width: none;
+    margin-left:   -1rem;
+    margin-right:  -1rem;
+    padding-top:    1rem;
+    padding-bottom: 1rem;
+    font-size: inherit;
+  }
+}
