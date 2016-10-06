@@ -222,3 +222,10 @@
     font-size: inherit;
   }
 }
+
+
+@media screen and (min-width: 769px) and (min-height: 600px) and (orientation: portrait) {
+  .slider {
+    height: 600px;
+  }
+}
