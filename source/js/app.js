@@ -7,6 +7,8 @@ window.onload = function () {
       var trigger = $(this);
       var nav     = trigger.closest('.nav');
       var drop    = nav.find('.nav__drop');
+      var header  = $('.header');
+
 
       if(nav.hasClass('nav--open')) {
 
@@ -15,12 +17,15 @@ window.onload = function () {
           $('body').css('overflow', '');
         });
 
+        header.css('z-index', '');
 
       } else {
 
         drop.show(0, function() {
           nav.addClass('nav--open');
+          header.css('z-index', 100);
         });
+
         $('body').css('overflow', 'hidden');
 
       }
@@ -92,6 +97,43 @@ window.onload = function () {
       if (target == 'next') {
         container = btn.closest('.section');
         scrollToPosition( container.height(), 1000 );
+      }
+    });
+
+  })();
+
+
+
+
+
+  // Боковавя панель на странице блога
+  (function() {
+    var trigger     = $('.blog__side-trigger');
+    var activeClass = 'blog__side--show';
+    var container;
+
+    if( trigger.length === 0) return;
+
+    container = trigger.closest('.blog__side');;
+
+
+    trigger.on('click', function(e) {
+      e.preventDefault();
+      container.toggleClass( activeClass );
+    });
+
+
+    $(document).on('click', '.blog__menu  .menu__item', function() {
+      var item      = $(this);
+
+      if(item.hasClass('menu__item--active')) return;
+      container.removeClass( activeClass );
+    });
+
+
+    $(window).on('resize', function() {
+      if( $(document).width() >= 960 && container.hasClass( activeClass ) ) {
+        container.removeClass( activeClass );
       }
     });
 

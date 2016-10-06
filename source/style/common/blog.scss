@@ -28,15 +28,101 @@
       text-align: right;
     }
 
-    .blog__menu {
-      &:first-child {
-        padding-top: .7rem;
+      .blog__side-trigger {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: 0;  bottom: 0;
+        width:  9px;
+        height: 40px;
+        margin: auto;
+        border-radius: 0 100% 100% 0 / 50%;
+        background: $green;
+        cursor: pointer;
       }
-    }
+
+      .blog__menu {
+        font-size: 16px;
+
+        &:first-child {
+          padding-top: .7rem;
+        }
+      }
 
 
     .blog__main {
       max-width: 108rem;
-      margin-left: 31rem;
-      padding: 0 0 0 10rem;
+      margin-left: 29.3rem;
+      padding: 0 0 0 7.3%;
     }
+
+
+
+
+
+@include laptop {
+  .blog__side {
+    position: fixed;
+    z-index: 50;
+    top: 0;  bottom: 0;
+    left: 0;
+    margin-left: -29.3rem;
+    background: $green;
+    color: $white;
+    transition:
+      margin-left .5s,
+      box-shaadow .5s;
+
+    &--show {
+      margin-left: 0;
+      box-shadow: 3px 0 5px rgba(0,0,0,.15);
+    }
+  }
+
+    .blog__side-trigger {
+      display: block;
+      box-shadow: 2px 0 5px rgba(0,0,0,.15);
+    }
+
+    .blog__menu {
+      overflow: auto;
+    }
+
+      .menu__item {
+        border-right: none;
+        opacity: .7;
+        transition: opacity .5s;
+
+        &:hover {
+          color: inherit;
+          opacity: .9;
+        }
+
+        &--active {
+          color: inherit;
+          opacity: 1;
+        }
+      }
+
+
+  .blog__main {
+    max-width: none;
+    margin-left: 0;
+    padding: 0;
+  }
+}
+
+
+@include tablets {
+  .blog {
+    padding-top:    4.7rem;
+    padding-bottom: 4.4rem;
+  }
+}
+
+
+@include phones {
+  .blog {
+    padding: 9.3vw 1rem 7vw;
+  }
+}

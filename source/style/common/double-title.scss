@@ -46,6 +46,12 @@
     max-width: none;
   }
 
+  .double-title--blog {
+    &  .double-title__bg {
+      transform: translate(-50%, -50%)  scale(1.2);
+    }
+  }
+
     .double-title__text {
       font-size: 4.9rem;
     }
@@ -60,6 +66,12 @@
 
 
 @include phones {
+  .double-title--blog {
+    &  .double-title__bg {
+      transform: translate(-50%, -50%)  scale(.7);
+    }
+  }
+
   .double-title__text {
     font-size: 3.5rem;
   }
