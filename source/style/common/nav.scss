@@ -94,29 +94,22 @@
     top: 0;
     left: 0;  right: 0;
     height: 100%;
-    padding: 10rem 0;
+    padding: 4rem 10rem;
     text-align: center;
     overflow: auto;
+    animation: curtian .5s forwards;
 
-    &:before,
-      &:after {
-        content: '';
-        position: absolute;
-        top: 0;  bottom: 0;
-        width: 0;
-        background: rgba($green, .9);
-        transition: width .5s;
-      }
-
-      &:before {
-        left: 0;
-      }
-      &:after {
-        right: 0;
-      }
+    &:after {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+    }
   }
 
   & .nav__list {
+    display: inline-block;
+    vertical-align: middle;
     margin: auto;
     max-width: 50rem;
   }
@@ -125,6 +118,10 @@
     margin-bottom: 1.25em;
     opacity: 0;
     transition: opacity .3s;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   & .nav__link {
@@ -169,13 +166,6 @@
     }
   }
 
-  .nav__drop {
-    &:before,
-    &:after {
-      width: 50%;
-    }
-  }
-
   &  .nav__list {
     position: relative;
     z-index: 10;
@@ -189,6 +179,26 @@
         transition-delay: .4s + (.15 * $i);
       }
     }
+  }
+}
+
+
+
+
+@keyframes curtian {
+  from {
+    background:
+      linear-gradient(rgba($green, .8), rgba($green, .8)) left,
+      linear-gradient(rgba($green, .8), rgba($green, .8)) right;
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+  }
+  to {
+    background:
+      linear-gradient(rgba($green, .8), rgba($green, .8)) left,
+      linear-gradient(rgba($green, .8), rgba($green, .8)) right;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
   }
 }
 
