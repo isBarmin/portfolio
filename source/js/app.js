@@ -36,7 +36,7 @@ $( document ).ready(function() {
         }
       });
 
-      image.on({
+      image.one({
         load : function () {
           setPercents(imgs.length, percentsTotal);
           percentsTotal++;
@@ -144,7 +144,7 @@ $( document ).ready(function() {
 
       function scrollToPosition(position, duration) {
         var position = position || 0;
-        var duration = duration || 500;
+        var duration = duration || 1000;
 
 
         $("body, html").animate({
@@ -159,7 +159,7 @@ $( document ).ready(function() {
 
       if (target == 'next') {
         container = btn.closest('.section');
-        scrollToPosition( container.height(), 1000 );
+        scrollToPosition( container.height() );
       }
     });
 
