@@ -169,6 +169,71 @@ $( document ).ready(function() {
 
 
 
+  // Прокрутка до выбранной статьи в блоге
+  (function() {
+    var articleAll = $('.post');
+    var linksAll   = $('.blog__menu .menu__link');
+
+    if(articleAll.length === 0) return;
+
+    showSection(window.location.hash, false);
+
+
+    function showSection(section, isAnimate) {
+      var target        = section.replace('#', '');
+      var reqSection    = articleAll.filter('[data-id="' + target + '"]');
+      var duration      = 750;
+
+      if (reqSection.length === 0) return;
+      var reqSectionPos = reqSection.offset().top;
+
+      if(isAnimate) {
+        $('body, html').animate({ scrollTop: reqSectionPos }, duration);
+      } else {
+        $('body, html').scrollTop(reqSectionPos);
+      }
+    }
+
+
+
+    function checkSection() {
+      articleAll.each(function(i, item) {
+        var article    = $(item);
+        var topEdge    = article.offset().top - 200;
+        var bottomEdge = topEdge + article.height();
+        var topScroll  = $(window).scrollTop();
+
+        if (topEdge < topScroll && bottomEdge > topScroll) {
+          var currentId = article.data('id');
+          var reqLink   = linksAll.filter('[href="#' + currentId + '"]');
+
+          reqLink.closest('.menu__item')
+            .addClass('menu__item--active')
+            .siblings()
+              .removeClass('menu__item--active');
+
+          window.location.hash = currentId;
+        }
+      });
+    }
+
+
+    $(window).on('scroll', function() {
+      checkSection();
+    });
+
+
+    $(document).on('click', '.blog__menu .menu__link', function(e) {
+      e.preventDefault();
+      showSection($(this).attr('href'), true);
+    });
+
+  })();
+
+
+
+
+
   // Боковавя панель на странице блога
   (function() {
     var trigger     = $('.blog__side-trigger');
