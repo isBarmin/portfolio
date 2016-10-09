@@ -1,3 +1,5 @@
+var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
 $( document ).ready(function() {
 
   // preloader
@@ -160,6 +162,42 @@ $( document ).ready(function() {
       if (target == 'next') {
         container = btn.closest('.section');
         scrollToPosition( container.height() );
+      }
+    });
+
+  })();
+
+
+
+
+
+  // sticky-меню на странице блога
+  (function() {
+    console.log( isMobile );
+
+    var container = $('.blog__in');
+    var menu      = container.find('.blog__menu');
+
+    if (menu.length === 0 || isMobile) return;
+
+    var containerBottom = container.offset().top + container.height() - 40;
+    var edgeTop         = menu.offset().top;
+    var menuHeight      = menu.height();
+
+
+    $(window).on('scroll', function() {
+      if(edgeTop < $(window).scrollTop()) {
+        if(containerBottom < $(window).scrollTop() + menuHeight) {
+          menu
+            .addClass('blog__menu--fix-bottom')
+            .removeClass('blog__menu--sticky');
+        } else {
+          menu
+            .addClass('blog__menu--sticky')
+            .removeClass('blog__menu--fix-bottom');
+        }
+      } else {
+        menu.removeClass('blog__menu--sticky');
       }
     });
 

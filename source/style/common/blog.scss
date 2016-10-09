@@ -18,6 +18,7 @@
 }
 
   .blog__in {
+    position: relative;
     max-width: 160rem;
     margin: auto;
   }
@@ -42,10 +43,22 @@
       }
 
       .blog__menu {
+        width: inherit;
         font-size: 16px;
 
         &:first-child {
           padding-top: .7rem;
+        }
+
+        &--sticky {
+          position: fixed;
+          top: 0;
+        }
+
+        &--fix-bottom {
+          position: absolute;
+          bottom: 0;
+          padding-bottom: inherit;
         }
       }
 
