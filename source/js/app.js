@@ -472,7 +472,8 @@ $( document ).ready(function() {
 
     // Валидация полей формы
     function validateForm(form) {
-      var inputs = form.find('[required]');
+      var inputs     = form.find('[required]');
+      var isValidate = true;
 
       inputs.removeClass('field--error');
 
@@ -484,18 +485,22 @@ $( document ).ready(function() {
         if(type == 'checkbox') {
           if(!input.is(':checked')) {
             input.addClass('field--error');
+            isValidate = false;
           }
           return;
         }
 
         if(value.trim() == '') {
           input.addClass('field--error');
+          isValidate = false;
         } else {
           input
             .removeClass('field--error')
             .addClass('field--ok');
         }
       });
+
+      return isValidate;
     } // validateForm();
 
 
@@ -503,7 +508,7 @@ $( document ).ready(function() {
 
     /* Отправка форм */
     function sendForm(form, method, url, dataType) {
-        validateForm(form);
+        if( !validateForm(form) ) return;
 
         $.ajax({
           type: method,
