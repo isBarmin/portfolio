@@ -42,7 +42,7 @@ block content
 
 
       .welcome__view.welcome__view--back
-        form.form-modal(name="login")
+        form#form-authorization.form-modal(name="login")
           .form-modal__body
             .title.form-modal__title Авторизуйтесь
 
@@ -60,7 +60,7 @@ block content
 
             .form-row.form-row--near
               label.check.check--checkbox
-                input.check__input(type="checkbox", name="is-human")
+                input.check__input(type="checkbox"  name="is-human"  value="yes")
                 i.check__fake
                 span.check__label Я человек
 
@@ -70,13 +70,13 @@ block content
               ul.check-group.check-group--inline
                 li.check-group__item
                   label.check.check--radio.check--highlight
-                    input.check__input(type="radio", name="really-human")
+                    input.check__input(type="radio"  name="really-human"  value="yes")
                     i.check__fake
                     span.check__label Да
 
                 li.check-group__item
                   label.check.check--radio.check--highlight
-                    input.check__input(type="radio", name="really-human")
+                    input.check__input(type="radio"  name="really-human"  value="no")
                     i.check__fake
                     span.check__label Не уверен
 

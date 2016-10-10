@@ -173,8 +173,6 @@ $( document ).ready(function() {
 
   // sticky-меню на странице блога
   (function() {
-    console.log( isMobile );
-
     var container = $('.blog__in');
     var menu      = container.find('.blog__menu');
 
@@ -448,6 +446,45 @@ $( document ).ready(function() {
     var slider = new Slider({
        elem: $('#js-slider')
     });
+  })();
+
+
+
+
+
+  // Обработка и отправка форм
+  (function() {
+
+
+
+    /* Отправка форм */
+    function sendForm(form, method, url, dataType) {
+        $.ajax({
+          type: method,
+          url:  url,
+          data: form.serialize()
+        })
+        .done(function(answer) {
+          console.log('form send: success');
+          form.trigger('reset');
+        })
+        .fail(function() {
+          console.log('form send: error', form.serialize());
+        });
+    } // sendForm();
+
+
+    $('.form-modal--callback').on('submit', function(e) {
+      e.preventDefault();
+      sendForm($(this), 'POST', 'mail.php');
+    });
+
+
+    $('#form-authorization').on('submit', function(e) {
+      e.preventDefault();
+      sendForm($(this), 'POST', 'authorization.php');
+    });
+
   })();
 
 
