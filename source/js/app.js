@@ -454,22 +454,68 @@ $( document ).ready(function() {
 
   // Обработка и отправка форм
   (function() {
+    $('form').attr('novalidate', true);
+
+    /* При фокусе убирать красную обводку */
+    $(document).on('focus', 'input, textarea', function(e) {
+      $(this)
+        .removeClass('field--error')
+        .removeClass('field--ok');
+    });
+
+    $(document).on('reset', 'form', function(e) {
+      $(this).find('input, textarea')
+        .removeClass('field--error')
+        .removeClass('field--ok');
+    });
+
+
+    // Валидация полей формы
+    function validateForm(form) {
+      var inputs = form.find('[required]');
+
+      inputs.removeClass('field--error');
+
+      inputs.each(function(i, item) {
+        var input = $(item);
+        var value = input.val();
+        var type  = input.attr('type');
+
+        if(type == 'checkbox') {
+          if(!input.is(':checked')) {
+            input.addClass('field--error');
+          }
+          return;
+        }
+
+        if(value.trim() == '') {
+          input.addClass('field--error');
+        } else {
+          input
+            .removeClass('field--error')
+            .addClass('field--ok');
+        }
+      });
+    } // validateForm();
+
 
 
 
     /* Отправка форм */
     function sendForm(form, method, url, dataType) {
+        validateForm(form);
+
         $.ajax({
           type: method,
           url:  url,
           data: form.serialize()
         })
         .done(function(answer) {
-          console.log('form send: success');
+          console.log('form send');
           form.trigger('reset');
         })
         .fail(function() {
-          console.log('form send: error', form.serialize());
+          // console.log('form send: error');
         });
     } // sendForm();
 

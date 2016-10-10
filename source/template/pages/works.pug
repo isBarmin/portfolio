@@ -136,13 +136,28 @@ block content
             .title.form-modal__title Связаться со мной
 
             .form-row
-              input.field.field--full(type="text"  name="name"  placeholder="Имя")
+              input.field.field--full(
+                type="text"
+                name="name"
+                placeholder="Имя"
+                required
+              )
 
             .form-row
-              input.field.field--full(type="email"  name="email"  placeholder="Email")
+              input.field.field--full(
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+              )
 
             .form-row
-              textarea.field.field--full(name="message"  placeholder="Ваше сообщение")
+              textarea.field.field--full(
+                name="message"
+                placeholder="Ваше сообщение"
+                required
+                pattern="^.{8,100}$"
+              )
 
           .form-modal__foot.btn-group.btn-group--equal
             .btn-group__item

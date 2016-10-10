@@ -48,19 +48,37 @@ block content
 
             .form-row
               .input-complex
-                input.field.input-complex__field(type="text"  name="login"  placeholder="Логин")
+                input.field.input-complex__field(
+                  type="text"
+                  name="login"
+                  placeholder="Логин"
+                  required
+                  pattern="^[a-zA-Z][a-zA-Z0-9]{2,12}$"
+                  title="2-12 символов (a-Z, 0-9)"
+                )
                 .input-complex__side
                   i.input-complex__icon.fa.fa-user
 
             .form-row
               .input-complex
-                input.field.input-complex__field(type="password"  name="password"  placeholder="Пароль")
+                input.field.input-complex__field(
+                  type="password"
+                  name="password"
+                  placeholder="Пароль"
+                  required
+                  pattern="^[a-zA-Z][a-zA-Z0-9]{8,20}$"
+                )
                 .input-complex__side
                   i.input-complex__icon.fa.fa-key
 
             .form-row.form-row--near
               label.check.check--checkbox
-                input.check__input(type="checkbox"  name="is-human"  value="yes")
+                input.check__input(
+                  type="checkbox"
+                  name="is-human"
+                  value="yes"
+                  required
+                )
                 i.check__fake
                 span.check__label Я человек
 
@@ -70,13 +88,23 @@ block content
               ul.check-group.check-group--inline
                 li.check-group__item
                   label.check.check--radio.check--highlight
-                    input.check__input(type="radio"  name="really-human"  value="yes")
+                    input.check__input(
+                      type="radio"
+                      name="really-human"
+                      value="yes"
+                      required
+                    )
                     i.check__fake
                     span.check__label Да
 
                 li.check-group__item
                   label.check.check--radio.check--highlight
-                    input.check__input(type="radio"  name="really-human"  value="no")
+                    input.check__input(
+                      type="radio"
+                      name="really-human"
+                      value="no"
+                      required
+                    )
                     i.check__fake
                     span.check__label Не уверен
 

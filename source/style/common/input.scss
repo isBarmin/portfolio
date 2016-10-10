@@ -130,6 +130,10 @@ textarea.field {
     opacity: 1;
   }
 
+  .check__input.field--error + .check__fake {
+    border-color: $red;
+  }
+
 
 .check--checkbox {}
   .check--checkbox .check__fake {
