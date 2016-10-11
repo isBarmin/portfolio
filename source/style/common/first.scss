@@ -2,10 +2,10 @@
   position: relative;
   height: 100vh;
   min-height: 500px;
-  background: #75A6A9 url(../img/bg/bg-mountains.jpg) no-repeat top / cover;
   color: $white;
   font-size: 0;
   text-align: center;
+  overflow: hidden;
 
   // цветовой фильтр
   &:before {
@@ -16,6 +16,18 @@
     background: rgba(#016672, .3);
   }
 }
+
+  .first__bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;  bottom: 0;
+    left: 0;  right: 0;
+
+    &  img {
+      display: block;
+      width: 100%;
+    }
+  }
 
   // фоновая надпись
   .first__bg-text {

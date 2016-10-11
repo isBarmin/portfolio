@@ -65,6 +65,46 @@ $( document ).ready(function() {
 
 
 
+  // parallax
+  var parallax = (function() {
+
+    var bg        = $('.first__bg');
+    var section   = $('.first__me  .me');
+    var text      = $('.first__bg-text');
+    var blogTitle = $('.first__title-wrap');
+
+    return {
+      move: function(el, windowScroll, strafeAmount) {
+        var wScroll = $(window).scrollTop();
+
+        var strafe = windowScroll / -strafeAmount + '%';
+        var transformString = 'translate3d(0,' + strafe + ', 0)';
+
+        el.css({
+          'transform': transformString,
+          '-webkit-transform': transformString
+        });
+
+      },
+
+      init: function(wScroll) {
+        this.move(bg, wScroll, 50);
+        this.move(text, wScroll, 30);
+        this.move(section, wScroll, 15);
+        this.move(blogTitle, wScroll, 18);
+      }
+    };
+
+  })();
+
+  $( window ).on('scroll', function() {
+    parallax.init( $(window).scrollTop() );
+  });
+
+
+
+
+
   // Работа главного меню
   (function() {
 
