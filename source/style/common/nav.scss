@@ -97,7 +97,7 @@
     padding: 4rem 10rem;
     text-align: center;
     overflow: auto;
-    animation: curtian .5s forwards;
+    animation: curtian 1s forwards;
 
     &:after {
       content: '';
@@ -177,7 +177,7 @@
     @for $i from 1 through 5 {
       &:nth-child(#{$i}) {
         transition-delay: .25s + (.15 * $i);
-        animation-delay: .25s + (.15 * $i);
+        animation-delay:  .25s + (.15 * $i);
       }
     }
   }
@@ -198,7 +198,7 @@
     background:
       linear-gradient(rgba($green, .8), rgba($green, .8)) left,
       linear-gradient(rgba($green, .8), rgba($green, .8)) right;
-    background-size: 50% 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
   }
 }
