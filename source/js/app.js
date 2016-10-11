@@ -2,6 +2,7 @@ var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.
 
 
 
+
 // parallax
 var parallax = (function() {
 
@@ -37,7 +38,6 @@ var parallax = (function() {
 
 
 
-
 // blur
 var blur = (function() {
 
@@ -65,10 +65,44 @@ var blur = (function() {
 
 
 
+// graph init
+var pie = (function() {
+  var pieAll = null;
+
+
+
+  return {
+    init: function() {
+      pieAll = $('.graph__in');
+      if(pieAll.length === 0) return;
+
+      pieAll.each(function(i, item) {
+        var value = $(item).attr('stroke-dasharray');
+        item.value = value;
+        $(item).attr('stroke-dasharray', '0 100');
+      });
+    },
+
+    getValue: function() {
+      if(pieAll.length === 0) return;
+
+      pieAll.each(function(i, item) {
+        item.setAttribute('stroke-dasharray', item.value);
+      });
+    }
+  };
+})();
+
+
+
+
+
 $( document ).ready(function() {
 
+  pie.init();
   blur.set();
   parallax.init();
+
 
 
   // preloader
@@ -778,6 +812,7 @@ $( document ).ready(function() {
 
 $(window).on('load', function() {
   $('body').addClass('loaded');
+  pie.getValue();
 });
 
 
