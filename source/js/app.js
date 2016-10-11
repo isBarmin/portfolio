@@ -44,8 +44,11 @@ var blur = (function() {
   var blur      = $('[data-blur-elem="form"]');
   var container = $('[data-blur-container="form"]');
 
+
   return {
     set: function() {
+      if (!blur.length || !container.length ) return;
+
       var imgWidth   = container.width();
       var offsetTop  = container.offset().top  - blur.offset().top;
       var offsetLeft = container.offset().left - blur.offset().left;
