@@ -1,6 +1,72 @@
 var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
+
+
+// parallax
+var parallax = (function() {
+
+  var bg        = $('.first__bg');
+  var section   = $('.first__me  .me');
+  var text      = $('.first__bg-text');
+  var blogTitle = $('.first__title-wrap');
+
+  return {
+    move: function(el, windowScroll, strafeAmount) {
+      var wScroll = $(window).scrollTop();
+
+      var strafe = windowScroll / -strafeAmount + '%';
+      var transformString = 'translate3d(0,' + strafe + ', 0)';
+
+      el.css({
+        'transform': transformString,
+        '-webkit-transform': transformString
+      });
+
+    },
+
+    init: function(wScroll) {
+      this.move(bg, wScroll, 50);
+      this.move(text, wScroll, 30);
+      this.move(section, wScroll, 15);
+      this.move(blogTitle, wScroll, 18);
+    }
+  };
+
+})();
+
+
+
+
+
+// blur
+var blur = (function() {
+
+  var blur      = $('[data-blur-elem="form"]');
+  var container = $('[data-blur-container="form"]');
+
+  return {
+    set: function() {
+      var imgWidth   = container.width();
+      var offsetTop  = container.offset().top  - blur.offset().top;
+      var offsetLeft = container.offset().left - blur.offset().left;
+
+      blur.css({
+        'background-size': imgWidth + 'px auto',
+        'background-position': offsetLeft + 'px' + ' ' + offsetTop + 'px'
+      });
+    }
+  };
+
+})();
+
+
+
+
 $( document ).ready(function() {
+
+  blur.set();
+  parallax.init();
+
 
   // preloader
   (function() {
@@ -65,41 +131,6 @@ $( document ).ready(function() {
 
 
 
-  // parallax
-  var parallax = (function() {
-
-    var bg        = $('.first__bg');
-    var section   = $('.first__me  .me');
-    var text      = $('.first__bg-text');
-    var blogTitle = $('.first__title-wrap');
-
-    return {
-      move: function(el, windowScroll, strafeAmount) {
-        var wScroll = $(window).scrollTop();
-
-        var strafe = windowScroll / -strafeAmount + '%';
-        var transformString = 'translate3d(0,' + strafe + ', 0)';
-
-        el.css({
-          'transform': transformString,
-          '-webkit-transform': transformString
-        });
-
-      },
-
-      init: function(wScroll) {
-        this.move(bg, wScroll, 50);
-        this.move(text, wScroll, 30);
-        this.move(section, wScroll, 15);
-        this.move(blogTitle, wScroll, 18);
-      }
-    };
-
-  })();
-
-  $( window ).on('scroll', function() {
-    parallax.init( $(window).scrollTop() );
-  });
 
 
 
@@ -739,6 +770,21 @@ $( document ).ready(function() {
 });
 
 
+
+
+
 $(window).on('load', function() {
   $('body').addClass('loaded');
+});
+
+
+
+$( window ).on('scroll', function() {
+  parallax.init( $(window).scrollTop() );
+});
+
+
+
+$( window ).on('resize', function() {
+  blur.set();
 });

@@ -35,16 +35,12 @@
 // форма обратной связи
 .form-modal--callback {
   position: relative;
-  background: url(../img/bg/bg-sea.jpg) fixed no-repeat top / cover;
-  overflow: hidden;
 
-
-  &:before {
-    background: inherit;
-    content: '';
+  &  .form-modal__blur {
     position: absolute;
-    top: -10px;  bottom: -10px;
-    left:-10px;  right:  -10px;
+    top: 0;  bottom: 0;
+    left:0;  right:  0;
+    background: url(../img/bg/bg-sea.jpg) no-repeat top;
     filter: blur(5px);
     filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
   }

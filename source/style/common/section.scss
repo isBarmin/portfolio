@@ -80,9 +80,18 @@
 
 // Секция "Что обо мне говорят"
 .section--about-me {
-  position: relative;
   padding-top: 1.4rem;
-  background: url(../img/bg/bg-sea.jpg) fixed no-repeat top / cover;
+  position: relative;
+  overflow: hidden;
+
+  & .section__bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;  bottom: 0;
+    left: 0;  right: 0;
+    min-width: 1500px;
+    background: #0A585E url(../img/bg/bg-sea.jpg) no-repeat top / 100%;
+  }
 }
 
   .section--about-me  .section__body {

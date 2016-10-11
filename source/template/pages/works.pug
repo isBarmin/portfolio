@@ -103,6 +103,8 @@ block content
 
 
   .section.section--about-me
+    .section__bg(data-blur-container="form")
+
     .section__body
       .section__title.double-title
         .double-title__text.title Что обо мне говорят
@@ -134,6 +136,8 @@ block content
 
       .section__line
         form.form-modal.form-modal--callback(name="callback")
+          .form-modal__blur(data-blur-elem="form")
+
           .form-modal__body
             .title.form-modal__title Связаться со мной
 
