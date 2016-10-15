@@ -3,6 +3,10 @@ var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.
 
 
 
+
+
+
+
 // parallax
 var parallax = (function() {
 
@@ -103,7 +107,29 @@ $( document ).ready(function() {
   blur.set();
   parallax.init();
 
+  // parallax on the welcome page
+  var mouseParallax = (function() {
 
+    var layerAll = $('.parallax__layer');
+
+    $(window).on('mousemove', function(e) {
+      var mouseX = e.pageX;
+      var mouseY = e.pageY;
+
+      var w = (window.innerWidth / 2)  - mouseX;
+      var h = (window.innerHeight / 2) - mouseY;
+
+      layerAll.map(function(i,item) {
+         var wPos = w * ((i + 1) / 175);
+         var hPos = h * ((i + 1) / 220);
+
+         $(item).css({
+            'transform': 'translate3d('+ wPos +'px,' + hPos + 'px, 0)'
+         });
+      });
+    });
+
+  })();
 
   // preloader
   (function() {

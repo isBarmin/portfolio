@@ -5,7 +5,7 @@
   justify-content: space-around;
   min-height: 100vh;
   padding: 10rem 1rem;
-  background: #fff url(../img/bg/bg-mountains.jpg)  no-repeat center / cover;
+  // background: #fff url(../img/bg/bg-mountains.jpg)  no-repeat center / cover;
   text-align: center;
   perspective: 1000;
 }
@@ -39,6 +39,16 @@
         transform: rotateY(180deg);
       }
     }
+
+
+  .welcome__parallax {
+    position: absolute;
+    top: 0;  bottom: 0;
+    left: 0;  right: 0;
+    // min-width: 1200px;
+    background: #CCD1CB url(../img/parallax/layer-1.jpg) top  no-repeat;
+  }
+
 
 .loaded .welcome__flipper {
   animation: show 1s;
@@ -81,6 +91,15 @@
 
 
 
+
+@include laptop {
+  .welcome {
+    background: url(../img/bg/bg-mountains.jpg) no-repeat center / cover;
+  }
+  .welcome__parallax {
+    display: none;
+  }
+}
 
 @include tablets {
   .welcome {

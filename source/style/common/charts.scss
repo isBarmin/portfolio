@@ -3,8 +3,6 @@
    width:  12rem;
    height: 12rem;
    text-align: center;
-   opacity: 0;
-   transition: opacity 1s;
 
    &__in {
       border-radius: 50%;
@@ -24,14 +22,8 @@
       fill: transparent;
       stroke: $green;
       stroke-dasharray: inherit;
+      transition: stroke-dasharray .8s;
    }
-}
-
-.loaded .graph {
-   opacity: 1;
-}
-.loaded  .graph__part {
-   transition: stroke-dasharray 1s;
 }
 
 
